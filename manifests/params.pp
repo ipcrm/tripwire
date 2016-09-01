@@ -11,7 +11,7 @@ class tripwire::params {
     }
     'RedHat', 'Amazon': {
       $tw_dir = '/usr/local/tripwire/te/agent/bin/'
-      $service_name = 'twdaemon'
+      $service_name = "${tw_dir} twdaemon"
     }
     default: {
       fail("${::operatingsystem} not supported")
