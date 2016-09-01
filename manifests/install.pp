@@ -4,7 +4,12 @@
 #
 class tripwire::install {
 
-  package { $::tripwire::package_name:
-    ensure => present,
-  }
+  $tw_dir = '/usr/local/tripwire/te/agent/bin/'
+  $twservice_start = "${tw_dir} twdaemon start"
+  $twip = hiera('twserverhost')
+  $twtripport = hiera('twport')
+  $pass = hiera('twpassphrase')
+
+
+
 }
