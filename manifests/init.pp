@@ -10,13 +10,12 @@
 #   Explanation of what this parameter affects and what it defaults to.
 #   e.g. "Specify one or more upstream ntp servers as an array."
 #
+
 class tripwire (
-  $package_name = $::tripwire::params::$tw_dir,
-  $service_name = $::tripwire::params::service_name,
-  $twip = hiera('twserverhost'),
-  $twtripport = hiera('twport'),
-  $pass = hiera('twpassphrase'),
-) inherits ::tripwire::params {
+  String $twip,
+  Integer[0, 65535] $twtripport,
+  String $pass,
+)  {
 
   # validate parameters here
 
