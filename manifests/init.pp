@@ -20,8 +20,5 @@ class tripwire (
   # validate parameters here
 
   class { '::tripwire::install': } -> 
-  #->
-  #class { '::tripwire::config': } ~>
-  #class { '::tripwire::service': } ->
   Class['::tripwire']
 }
