@@ -5,7 +5,7 @@
 #
 class tripwire::service {
 
-  service { 'servicename':#$::tripwire::service_name:
+  service { 'servicename':
     ensure     => running,
     enable     => true,
     hasstatus  => true,
