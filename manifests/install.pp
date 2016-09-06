@@ -6,7 +6,7 @@ class tripwire::install
 {
 
   notify { 'This is the install class ':
-  message => "This is the install class --server-host ${::tripwire::tripip} --server-port ${::tripwire::twtripport} --passphrase ${::tripwire::pass} --enable-fips This directory is at ${::tripwire}::$tripwire_installdir",
+  message => "This is the install class --server-host ${::tripwire::tripip} --server-port ${::tripwire::twtripport} --passphrase ${::tripwire::pass} --enable-fips This directory is at ${::tripwire::tripwire_installdir}",
   }
 
   # file {'/tmp/':
