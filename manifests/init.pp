@@ -15,6 +15,7 @@ class tripwire (
   String $twip,
   Integer[0, 65535] $twtripport,
   String $pass,
+  String $tripwire_installdir,
 )  {
 
   # validate parameters here
