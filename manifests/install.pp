@@ -2,15 +2,10 @@
 #
 # This class is called from tripwire for install.
 #
-class tripwire::install(
-  String $twip,
-  Integer[0, 65535] $twtripport,
-  String $pass,
-  String $tripwire_installdir,
-  )
+class tripwire::install
   {
   notify { 'This is the install class ':
-      message => "This is the install class --server-host ${twip} --server-port ${twtripport} --passphrase ${pass} --enable-fips",
+      message => "This is the install class --server-host ${::twip} --server-port ${::twtripport} --passphrase ${::pass} --enable-fips",
     }
 
   #  file {'/tmp/':
