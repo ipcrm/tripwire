@@ -4,7 +4,7 @@
 #
 class tripwire::install {
   notify { 'This is the install class ':
-      message => "This is the install class --server-host $twserverhost --server-port $twport --passphrase $twpassphrase --enable-fips",
+      message => "This is the install class --server-host ${twserverhost} --server-port ${twport} --passphrase ${twpassphrase} --enable-fips",
     }
 
 }
