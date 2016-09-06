@@ -20,7 +20,7 @@ class tripwire (
 
   # validate parameters here
 
-  class {'::tripwire::install': $twip, $twtripport, $pass } ->
+  class {'::tripwire::install':} ->
   class {'::tripwire::config':} ~>
   class {'::tripwire::service':} ->
   Class['::tripwire']
