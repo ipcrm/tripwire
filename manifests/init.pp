@@ -18,10 +18,14 @@ class tripwire (
   String $tripwire_installdir,
 )  {
 
+  notify { 'This is the init class ':
+      message => "This is the install class --server-host ${twip} --server-port ${twtripport} --passphrase ${pass} --enable-fips",
+    }
+
   # validate parameters here
 
-  class {'::tripwire::install':} ->
-  class {'::tripwire::config':} ~>
-  class {'::tripwire::service':} ->
-  Class['::tripwire']
-}
+  #class {'::tripwire::install':} ->
+#  class {'::tripwire::config':} ~>
+#  class {'::tripwire::service':} ->
+#  Class['::tripwire']
+#}
