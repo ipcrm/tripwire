@@ -8,6 +8,9 @@ $twtripport,
 $pass,
 $tripwire_installdir,
   )
+
+  include tripwire,
+  
   {
   notify { 'This is the install class ':
       message => "This is the install class --server-host ${tripip} --server-port ${::tripwire::twtripport} --passphrase ${::tripwire::pass} --enable-fips",
