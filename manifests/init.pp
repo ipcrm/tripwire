@@ -21,6 +21,7 @@ class tripwire (
   notify { 'This is the init class ':
       message => "This is the install class --server-host ${twip} --server-port ${twtripport} --passphrase ${pass} --enable-fips",
     }
+  }
 
   # validate parameters here
 
