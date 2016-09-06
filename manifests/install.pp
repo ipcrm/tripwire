@@ -3,10 +3,10 @@
 # This class is called from tripwire for install.
 #
 class tripwire::install(
-  String $tripip,
-  Integer[0, 65535] $twtripport,
-  String $pass,
-  String $tripwire_installdir,
+$tripip,
+$twtripport,
+$pass,
+$tripwire_installdir,
   )
   {
   notify { 'This is the install class ':
