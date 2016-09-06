@@ -10,7 +10,7 @@ class tripwire::install(
   )
   {
   notify { 'This is the install class ':
-      message => "This is the install class --server-host ${::tripwire::twserverhost} --server-port ${::tripwire::twport} --passphrase ${::tripwire::twpassphrase} --enable-fips",
+      message => "This is the install class --server-host ${::tripwire::twip} --server-port ${::tripwire::twtripport} --passphrase ${::tripwire::pass} --enable-fips",
     }
 
   #  file {'/tmp/':
