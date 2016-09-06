@@ -2,12 +2,7 @@
 #
 # This class is called from tripwire for install.
 #
-class tripwire::install(
-$tripip = ::tripwire::twip,
-$twtripport,
-$pass,
-$tripwire_installdir,
-  )
+class tripwire::install
 
   {
   notify { 'This is the install class ':
