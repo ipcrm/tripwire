@@ -5,7 +5,7 @@
 class tripwire::install
 {
 
-  notify { 'This is the install class ':
+  notify { 'This is the install class':
   message     => "./te_agent.bin --eula accept --silent --server-host ${::tripwire::tripip} --server-port ${::tripwire::twtripport} --passphrase ${::tripwire::pass} --enable-fips",
   #This directory is at ${::tripwire::tripwire_installdir}",
   }
