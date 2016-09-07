@@ -19,7 +19,7 @@ class tripwire::install
   exec { 'installtripagt':
   cwd         => $::tripwire::tripwire_installdir,
   path        => $::tripwire::tripwire_installdir,
-  command     => "./te_agent.bin --eula accept --silent --server-host ${::tripwire::tripip} --server-port ${::tripwire::twtripport} --passphrase ${::tripwire::pass} --enable-fips",
+  command     => 'pwd'#"./te_agent.bin --eula accept --silent --server-host ${::tripwire::tripip} --server-port ${::tripwire::twtripport} --passphrase ${::tripwire::pass} --enable-fips",
   refreshonly => true,
 
 
