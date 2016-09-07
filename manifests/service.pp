@@ -7,7 +7,7 @@ class tripwire::service {
 
   service { 'twdaemon':
     ensure     => running,
-    enable     => true,
+    #enable     => true,
     hasstatus  => true,
     hasrestart => true,
   }
