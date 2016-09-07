@@ -12,7 +12,7 @@ class tripwire::install
   ensure => 'file',
   owner  => 'root',
   group  => 'root',
-  #notify => Exec['installtripagt'],
+  notify => Exec['installtripagt'],
 }
 
 
@@ -26,6 +26,7 @@ class tripwire::install
   require   => File['/tmp/te_agent_8.4.2_en_linux_x86_64/te_agent.bin'],
   creates   => '/usr/local/tripwire/te/agent/bin/',
   logoutput => true,
+  timeout   => 1800,
 
 
 
