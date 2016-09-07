@@ -27,6 +27,6 @@ class tripwire (
 
 class {'::tripwire::install':} ->
 #class {'::tripwire::config':} ->
-#class {'::tripwire::service':} ->
+class {'::tripwire::service':} ->
 Class['::tripwire']
 }
