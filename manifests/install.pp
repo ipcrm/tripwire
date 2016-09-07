@@ -23,7 +23,7 @@ class tripwire::install
   command   => "/bin/sh te_agent.bin --eula accept --silent --server-host ${::tripwire::twip} --server-port ${::tripwire::twtripport} --passphrase ${::tripwire::pass} --enable-fips",
   require   => File['/tmp/te_agent_8.4.2_en_linux_x86_64/te_agent.bin'],
   creates   => '/usr/local/tripwire',
-  logoutput => on_failure,
+  logoutput => true,
 
 
 }
