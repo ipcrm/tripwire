@@ -14,7 +14,7 @@ class tripwire::install
   ensure => 'file',
   owner  => 'root',
   group  => 'root',
-  notify => Exec['installtripagt'],
+  #notify => Exec['installtripagt'],
 }
 
 
