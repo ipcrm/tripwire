@@ -5,7 +5,7 @@
 #
 class tripwire::service {
 
-  service { '/etc/init.d/ twdaemon':
+  service { 'twdaemon':
     ensure     => running,
     enable     => true,
     hasstatus  => true,
