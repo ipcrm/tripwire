@@ -19,7 +19,7 @@ class tripwire::install
 
   exec { 'installtripagt':
   cwd         => '/tmp/te_agent_8.4.2_en_linux_x86_64/',
-  command     => './te_agent.bin --eula accept --silent --server-host 10.250.144.45 --server-port 9898 --passphrase 53rv1c35 --enable-fips',
+  command     =>
   refreshonly => true,
 
 
