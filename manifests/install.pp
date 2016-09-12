@@ -15,10 +15,6 @@ class tripwire::install
   notify => Exec['installtripagt'],
 }
 
-
-#notify { 'This is the init class ':
-#  message => $::tripwire::tripwire_installdir,
-#  }
   exec { 'installtripagt':
   cwd       => '/tmp',
   path      => [$::tripwire::tripwire_installdir,'/bin','/usr/bin'],
