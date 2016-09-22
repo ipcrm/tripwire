@@ -8,7 +8,7 @@ class tripwire::params {
   $twservice_start = "${tw_dir} twdaemon start"
 
   case $::osfamily {
-    'Debian': {
+    'RedHat': {
       $package_name = 'tripwire'
       $service_name = 'tripwire'
 
