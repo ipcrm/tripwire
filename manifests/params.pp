@@ -4,23 +4,19 @@
 # It sets variables according to platform.
 #
 class tripwire::params {
+  $tw_dir = '/usr/local/tripwire/te/agent/bin/'
+  $twservice_start = "${tw_dir} twdaemon start"
+
   case $::osfamily {
     'Debian': {
       $package_name = 'tripwire'
       $service_name = 'tripwire'
-      $tw_dir = '/usr/local/tripwire/te/agent/bin/'
-      $twservice_start = "${tw_dir} twdaemon start"
-    }
-    'RedHat', 'Amazon': {
-
-      $tw_dir = '/usr/local/tripwire/te/agent/bin/'
-      $twservice_start = "${tw_dir} twdaemon start"
 
     }
+
     default: {
       fail("${::operatingsystem} not supported")
-      $tw_dir = '/usr/local/tripwire/te/agent/bin/'
-      $twservice_start = "${tw_dir} twdaemon start"
+
     }
   }
 }
