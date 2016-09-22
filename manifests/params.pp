@@ -8,6 +8,8 @@ class tripwire::params {
     'Debian': {
       $package_name = 'tripwire'
       $service_name = 'tripwire'
+      $tw_dir = '/usr/local/tripwire/te/agent/bin/'
+      $twservice_start = "${tw_dir} twdaemon start"
     }
     'RedHat', 'Amazon': {
 
@@ -17,6 +19,8 @@ class tripwire::params {
     }
     default: {
       fail("${::operatingsystem} not supported")
+      $tw_dir = '/usr/local/tripwire/te/agent/bin/'
+      $twservice_start = "${tw_dir} twdaemon start"
     }
   }
 }
