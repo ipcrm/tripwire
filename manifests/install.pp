@@ -13,6 +13,13 @@ class tripwire::install {
   notify => Exec['installtripagt'],
 }
 
+#  file {'/tmp/te_agent_8.4.2_en_linux_x86_64/te_agent.bin':
+#    ensure => 'file',
+#    owner  => 'root',
+#    group  => 'root',
+#    notify => Exec['installtripagt'],
+#  }
+
   exec { 'installtripagt':
     cwd       => '/tmp',
     path      => [$::tripwire::tripwire_installdir,'/bin','/usr/bin'],
