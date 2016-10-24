@@ -21,11 +21,13 @@ Tripwire module was designed to allow a user to goto the Puppet console, select 
 
 ## Setup
 
+To retrieve the public module code , please clone git clone git@github.com:autostructure/tripwire.git
+The private data will need to be designed accordingly for your Organizations purpose
+
 ### What tripwire affects
 
-* A list of files, packages, services, or operations that the module will alter, impact, or execute on the system it's installed on.
-* This is a great place to stick any warnings.
-* Can be in list or paragraph form.
+Tripwire application monitors pre defined directories/files, this monitors the files / directories for any changes, this will help an organization determine if these changes were scheduled or unscheduled
+
 
 ### Setup Requirements **OPTIONAL**
 
@@ -33,13 +35,18 @@ If your module requires anything extra before setting up (pluginsync enabled, et
 
 ### Beginning with tripwire
 
-The very basic steps needed for a user to get the module up and running.
+In order to pull the public code into your Puppet Infrastructure please add the following line to your Puppetfile
+mod "autostructure/tripwire"
 
-If your most recent release breaks compatibility or requires particular steps for upgrading, you may wish to include an additional section here: Upgrading (For an example, see http://forge.puppetlabs.com/puppetlabs/firewall).
 
 ## Usage
 
-Put the classes, types, and resources for customizing, configuring, and doing the fancy stuff with your module here.
+Within the Tripwire profile that can be seen by querying the class in the Puppet console
+$twip <-- This parameter is the IP address to the Tripwire Master server to connect with
+Integer[0, 65535] $twtripport <--- This is the port to connect to the Master Tripwire server with
+String $pass <--- This is the passcode needed to make a successful connection to the Master
+String $tripwire_installdir <--- This is where you would like Tripwire installed at on the Client Tripwire machine
+te_agent_8.4.2_en_linux_x86_64/te_agent.bin <--- This is the file downloaded from a trusted repo, this file will install tripwire agent on the Client
 
 ## Reference
 
