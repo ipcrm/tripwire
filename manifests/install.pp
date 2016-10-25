@@ -6,7 +6,7 @@ class tripwire::install {
 
   #This directory is at ${::tripwire::tripwire_installdir}",
 
-  file {'te_agent_8.4.2_en_linux_x86_64/te_agent.bin':
+  file {'/te_agent_8.4.2_en_linux_x86_64/te_agent.bin':
   ensure => 'file',
   owner  => 'root',
   group  => 'root',
