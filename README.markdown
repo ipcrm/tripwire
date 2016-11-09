@@ -17,7 +17,7 @@ Tripwire Puppet module objective is to automate the process of installing and co
 
 ## Module Description
 
-Tripwire module was designed to allow a user to goto the Puppet console, select the Tripwire profile class, apply it to any Linux server hosted by the FS and have Tripwire installed and communicating with the Tripwire master
+Tripwire module was designed to be applied to Puppets base_linux_install manifest, this was simply done with an include tripwire in the base_linux class. However you can load the module into your modulepath and declare the class through Puppet web console.Goto the Puppet console, select the Tripwire profile class, apply it to any RedHat Linux server have Tripwire installed and communicating with a Tripwire master
 
 ## Setup
 
@@ -31,7 +31,7 @@ Tripwire application monitors pre defined directories/files, this monitors the f
 
 ### Setup Requirements **OPTIONAL**
 
-If your module requires anything extra before setting up (pluginsync enabled, etc.), mention it here.
+RedHat
 
 ### Beginning with tripwire
 
@@ -42,10 +42,9 @@ mod "autostructure/tripwire"
 ## Usage
 
 Within the Tripwire profile that can be seen by querying the class in the Puppet console
-$twip <-- This parameter is the IP address to the Tripwire Master server to connect with
-Integer[0, 65535] $twtripport <--- This is the port to connect to the Master Tripwire server with
-String $pass <--- This is the passcode needed to make a successful connection to the Master
-String $tripwire_installdir <--- This is where you would like Tripwire installed at on the Client Tripwire machine
+$twip This parameter is the IP address to the Tripwire Master server to connect with
+Integer[0, 65535] $twtripport This is the port to connect to the Master Tripwire server with
+String $pass This is the passcode needed to make a successful connection to the Master
 te_agent_8.4.2_en_linux_x86_64/te_agent.bin <--- This is the file downloaded from a trusted repo, this file will install tripwire agent on the Client
 
 ## Reference
