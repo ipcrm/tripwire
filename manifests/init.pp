@@ -16,13 +16,10 @@ class tripwire (
   Integer[0, 65535] $twtripport,
   String $pass,
   String $tripwire_installdir,
-)
-{
-  
+) {
   # validate parameters here
-
-class {'::tripwire::install':} ->
-#class {'::tripwire::config':} ->
-class {'::tripwire::service':} ->
-Class['::tripwire']
+  class {'::tripwire::install':} ->
+  #class {'::tripwire::config':} ->
+  class {'::tripwire::service':} ->
+  Class['::tripwire']
 }
