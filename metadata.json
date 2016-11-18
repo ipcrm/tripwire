@@ -1,6 +1,6 @@
 {
   "name": "autostructure-tripwire",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "author": "Ryan Vandelinder",
   "summary": "Installs and configures tripwire",
   "license": "tripwire-1.1",
