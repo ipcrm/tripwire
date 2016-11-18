@@ -5,7 +5,7 @@
 #
 class tripwire::params {
   $tw_dir = '/usr/local/tripwire/te/agent/bin/'
-  $twservice_start = "${tw_dir} twdaemon start"
+  $twservice_start = 'service twdaemon start'
 
   case $::osfamily {
     'RedHat': {
