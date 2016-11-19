@@ -2,6 +2,6 @@
 -Release V1 Tripwire module
 -Release V1.4 will be a final release before releasing v2 production test ready in a few days.
   The module has undergone some changes, now the module will set the service so that it is chkconfig handled and maintained properly.
-  I will be also adding to the dependency list, the puppet archive module that is used 
+  I will be also adding to the dependency list, the puppet archive module that is used to retrieve the package. 
   Tripwire is fetched by the client to /usr/local it is unzip to the location /usr/local/tripwire. Previously it was housed on /tmp but this caused Puppet to redownloa  d the package if /tmp got cleared or that particular package was deleted.
   My objective with release v1.4.0 is to enhance my puppet forge module score by correcting some of the mistakes. I will be hiding the directory that tripwire is uploa  ded to, extracted, and installed 
