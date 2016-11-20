@@ -1,9 +1,9 @@
 {
   "name": "autostructure-tripwire",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "author": "Ryan Vandelinder",
   "summary": "Installs and configures tripwire",
-  "license": "tripwire-1.1",
+  "license": "tripwire-1.5",
   "source": "https://github.com/autostructure/tripwire.git",
   "project_page": "https://github.com/autostructure/tripwire",
   "issues_url": "https://github.com/autostructure/tripwire/issues",
