@@ -4,7 +4,7 @@
 # It sets variables according to platform.
 #
 class tripwire::params {
-  $tw_dir = '/usr/local/tripwire/te/agent/bin/'
+
   $twservice_start = 'service twdaemon start'
 
   case $::osfamily {

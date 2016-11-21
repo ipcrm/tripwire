@@ -7,9 +7,6 @@ class tripwire::service {
 
   service { 'twdaemon':
     ensure     => running,
-    #start      => "/usr/local/tripwire/te/agent/bin/twdaemon start",
-    #stop       => "/usr/local/tripwire/te/agent/bin/twdaemon stop",
-    #status     => "/usr/local/tripwire/te/agent/bin/twdaemon status",
     hasstatus  => true,
     hasrestart => true,
   }

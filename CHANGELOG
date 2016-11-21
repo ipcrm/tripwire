@@ -4,3 +4,6 @@
   The module has undergone some changes, now the module will set the service so that it is chkconfig handled and maintained properly.
   I have added the init.d script need to be put in place before the initial start of the service, this ensures the OS can read the service status, and use start and stop functions
 -Release V1.5.0 Will use the profile parameter to define the install directory
+
+-Release v1.7.0 will allow a person to search hiera in the profile for the triipwire_installdir, I didn't want to expose internal data structure.
+  I also cleaned up the code and deleted some unneeded comments
