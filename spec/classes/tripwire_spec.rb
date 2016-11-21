@@ -1,14 +1,15 @@
 require 'spec_helper'
 
-describe 'tripwire' do
-  describe 'tripwire', :type => :class do
+describe 'tripwire', :type => :class do
   let(:params) do
     {
       master_host: '10.250.144.45',
       master_port: 9898,
       master_passcode: 'fs pass',
       client_installdir: '/usr/local',
-}
+  }
+  end
+
   context 'supported operating systems' do
     on_supported_os.each do |os, facts|
       context "on #{os}" do
