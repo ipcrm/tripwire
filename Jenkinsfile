@@ -3,6 +3,7 @@
 // Build and test a Maven project
 
 node {
+  deleteDir()
   env.PUPPET_INSTALL_VERSION = "1.8.0"
   env.PUPPET_INSTALL_TYPE = "agent"
 
@@ -30,7 +31,6 @@ node {
      sh 'bundle exec rspec spec/acceptance'
     }
   }
-  deleteDir()
 }
 
 def withRvm(version, cl) {
