@@ -13,11 +13,8 @@ describe 'tripwire class' do
       apply_manifest(pp, :catch_changes  => true)
     end
 
-    describe package('tripwire') do
-      it { is_expected.to be_installed }
-    end
 
-    describe service('tripwire') do
+    describe service('twdaemon') do
       it { is_expected.to be_enabled }
       it { is_expected.to be_running }
     end

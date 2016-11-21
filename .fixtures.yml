@@ -1,5 +1,6 @@
 fixtures:
   repositories:
-    stdlib: "https://github.com/puppetlabs/puppetlabs-stdlib.git"
+    staging: https://github.com/autostructure/puppet-staging.git
+    stdlib: https://github.com/puppetlabs/puppetlabs-stdlib.git
   symlinks:
     tripwire: "#{source_dir}"
