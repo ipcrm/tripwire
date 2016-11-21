@@ -1,3 +1,6 @@
+<%- |
+      String $client_installdir,
+| -%>
 #!/bin/sh
 # chkconfig: 35 94 94
 # description: Tripwire Agent
@@ -12,4 +15,4 @@
 # Default-Stop:   0 1 6
 # Description:    Tripwire Daemon
 ### END INIT INFO
-/usr/local/tripwire/te/agent/bin/twdaemon "$@"
+<%= $client_installdir %>/tripwire/te/agent/bin/twdaemon "$@"
