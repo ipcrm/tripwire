@@ -14,7 +14,7 @@ class tripwire::install {
   }
 
   exec { 'installtripagt':
-    cwd       => '/tmp'
+    cwd       => '/tmp',
     path      => ['$::tripwire::tripwire_installdir','/bin','/usr/bin'],
     command   => "te_agent.bin --eula accept --silent --server-host ${::tripwire::twip} --server-port ${::tripwire::twtripport} --passphrase ${::tripwire::pass} --enable-fips",
     creates   => "${::tripwire::tripwire_installdir}/tripwire/te/agent/bin/",
