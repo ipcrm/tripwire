@@ -5,7 +5,12 @@ describe 'tripwire class' do
     # Using puppet_apply as a helper
     it 'should work idempotently with no errors' do
       pp = <<-EOS
-      class { 'tripwire': }
+      class { 'tripwire':
+        master_host        => '10.250.144.45',
+        master_port        => 9898,
+        master_passcode    => 'fs pass',
+        client_installdir  => '/usr/local',
+      }
       EOS
 
       # Run it twice and test for idempotency
