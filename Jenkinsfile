@@ -10,6 +10,7 @@ node {
 
   withRvm('ruby-2.3.2') {
     stage('Ruby Gems') {
+      sh 'gem install bunder --no-ri --no-rdoc'
       sh 'bundle install'
     }
 
