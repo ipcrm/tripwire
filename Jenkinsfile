@@ -10,7 +10,7 @@ node {
 
   withRvm('ruby-2.3.2') {
     stage('Ruby Gems') {
-      sh 'bundle update'
+      sh 'bundle install'
     }
 
     stage('Do Puppet Code Validation') {
