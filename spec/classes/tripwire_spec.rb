@@ -19,12 +19,9 @@ describe 'tripwire', :type => :class do
 
         context "tripwire class without any parameters" do
           it { is_expected.to compile.with_all_deps }
-
-          it { is_expected.to contain_class('tripwire::params') }
           it { is_expected.to contain_class('tripwire::install').that_comes_before('tripwire::config') }
           it { is_expected.to contain_class('tripwire::config') }
           it { is_expected.to contain_class('tripwire::service').that_subscribes_to('tripwire::config') }
-
           it { is_expected.to contain_service('twdaemon') }
           #it { is_expected.to contain_package('tripwire').with_ensure('present') }
         end

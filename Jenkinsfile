@@ -30,6 +30,7 @@ node {
      sh 'bundle exec rspec spec/acceptance'
     }
   }
+  deleteDir()
 }
 
 def withRvm(version, cl) {
