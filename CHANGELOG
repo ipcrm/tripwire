@@ -7,3 +7,6 @@
 
 -Release v1.7.0 will allow a person to search hiera in the profile for the triipwire_installdir, I didn't want to expose internal data structure.
   I also cleaned up the code and deleted some unneeded comments
+
+-Release v2.0.0 will be production ready test. We have setup the spec helper functions for testing, I have established the install directory to be parsed from hiera. Comments and code has been cleaned up.
+
