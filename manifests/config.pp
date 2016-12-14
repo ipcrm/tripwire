@@ -32,7 +32,7 @@ class tripwire::config {
   }
 }
 elseif $::operatingsystemrelease =~ /^7.*/ {
-  file { '/etc/systemd/system':
+  file { '/etc/systemd/system/twdaemon':
     ensure  => 'file',
     mode    => '0755',
     owner   => 'root',
@@ -45,18 +45,18 @@ elseif $::operatingsystemrelease =~ /^7.*/ {
     ),
   }
 
-  file { '/etc/rc.d/init.d/twdaemon':
-    ensure  => 'file',
-    mode    => '0755',
-    owner   => 'root',
-    group   => 'root',
-    content => epp(
-      'tripwire/sysdtwdaemon.epp',
-      {
-        client_installdir => $::tripwire::client_installdir
-      }
-    ),
-  }
+#  file { '/etc/rc.d/init.d/twdaemon':
+#    ensure  => 'file',
+#    mode    => '0755',
+#    owner   => 'root',
+#    group   => 'root',
+#    content => epp(
+#      'tripwire/sysdtwdaemon.epp',
+#      {
+#        client_installdir => $::tripwire::client_installdir
+#      }
+#    ),
+#  }
 }
 
 
