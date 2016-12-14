@@ -4,7 +4,7 @@
 #
 class tripwire::config {
 
-
+if $::operatingsystemrelease =~ /^7.*/ {
   file { '/etc/systemd/system/twdaemon':
     ensure  => 'file',
     mode    => '0755',
@@ -17,6 +17,7 @@ class tripwire::config {
       }
     ),
   }
+}
 }
 
 #  file { '/etc/rc.d/init.d/twdaemon':
