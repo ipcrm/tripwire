@@ -1,0 +1,12 @@
+[Unit]
+Description=Tripwire Service
+After=syslog.target
+
+[Service]
+Type=simple
+User=root
+ExecStart=/usr/local/tripwire/te/agent/bin/twdaemon start
+Type=forking
+
+[Install]
+WantedBy=multi-user.target
