@@ -3,7 +3,7 @@
 # This class is called from tripwire for service config.
 #
 class tripwire::config {
-  if $::operatingsystemmarelease =~ /^6.*/ {
+  if $::operatingsystemrelease =~ /^6.*/ {
 
   file { '/etc/init.d/twdaemon':
     ensure  => 'file',
@@ -32,7 +32,7 @@ class tripwire::config {
   }
 }
 
-elseif $::operatingsystemmarelease =~ /^7.*/ {
+elseif $::operatingsystemrelease =~ /^7.*/ {
 
   file { '/etc/systemd/system/twdaemon':
     ensure  => 'file',
