@@ -22,8 +22,8 @@ class tripwire (
   String $client_installdir,
 ) {
   # validate parameters here
-  class {'::tripwire::config':} ->
-  class {'::tripwire::install':} ~>
+  class {'::tripwire::install':} ->
+  class {'::tripwire::config':} ~>
   class {'::tripwire::service':} ->
   Class['::tripwire']
 }
