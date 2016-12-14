@@ -30,7 +30,7 @@ class tripwire::config {
       }
     ),
   }
-}
+
 
 elseif $::operatingsystemrelease =~ /^7.*/ {
 
@@ -61,5 +61,5 @@ elseif $::operatingsystemrelease =~ /^7.*/ {
 #  }
 }
 
-
+}
 }
