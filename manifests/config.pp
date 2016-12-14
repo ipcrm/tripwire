@@ -31,7 +31,7 @@ class tripwire::config {
     ),
   }
 }
-if $::operatingsystemrelease =~ /^7.*/ {
+elseif $::operatingsystemrelease =~ /^7.*/ {
   file { '/etc/systemd/system':
     ensure  => 'file',
     mode    => '0755',
