@@ -20,6 +20,7 @@ class tripwire (
   Integer[0, 65535] $master_port,
   String $master_passcode,
   String $client_installdir,
+  String $install_media_dir,
 ) {
   # validate parameters here
   class {'::tripwire::install':} ->
